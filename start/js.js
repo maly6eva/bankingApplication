@@ -176,9 +176,24 @@ btnLoan.addEventListener('click', function (e) {
     inputLoanAmount.value = ''
 })
 
+// const accMov =  accounts.map(function(acc) {
+//     return acc.movements
+// })
+// console.log(accMov)
+//
+// const allMov = accMov.flat()
+// console.log(allMov)
+//
+// const allBalance = allMov.reduce(function(acc, mov) {
+//     return acc + mov;
+// }, 0)
+// console.log(allBalance)
 
-
-
+const overalBalance = accounts
+    .map(acc => acc.movements)
+    .flat()
+    .reduce((acc, mov) => acc + mov, 0)
+console.log(overalBalance)
 
 
 
