@@ -191,3 +191,8 @@ btnSort.addEventListener('click', function (e) {
     sorted = !sorted;
 })
 
+labelBalance.addEventListener('click', function() {
+    Array.from(document.querySelectorAll('.movements__value'), function(val, i) {
+        return (val.innerText = val.textContent.replace('₽', ' PUB🐥'))
+    })
+})
